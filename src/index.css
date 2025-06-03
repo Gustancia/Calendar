@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  cursor: url('/images/cursor.png') 8 8, auto; /* Cursor normal: cuchara de tamaño estándar */
+}
+
+/* Reglas para elementos interactivos */
+/* Seleccionar todos los elementos que tengan el cursor de cuchara grande */
+button,
+a,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.calendario-day-button, /* Clase que podría añadir a los botones de día del calendario */
+.interactuable { /* Una clase genérica que puedo añadir a cualquier otro elemento */
+  /* Cursor interactivo: cuchara ligeramente más grande */
+  cursor: url('/images/cursor-lg.png') 8 8, pointer;
+}
+
+.flex.justify-center.gap-2.mb-6 button { /* Si esos botones tienen alguna clase específica, úsala */
+  cursor: url('/images/cursor-lg.png') 8 8, pointer;
+}
+
+
+/* Estos deben estar al final si se usa Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
