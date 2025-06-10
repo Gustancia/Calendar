@@ -13,8 +13,8 @@ const CityRevealButton = () => {
   const handleClick = () => {
     setRevealed(true);
     setShowGif(false);
-    setTimeout(() => setShowGif(true), 100); // Show GIF after 0,2s
-    setTimeout(() => setShowGif(false), 3550); // Hide GIF after 2,8s (adjust if your GIF is longer)
+    setTimeout(() => setShowGif(true), 100); // Show GIF after 0,1s
+    setTimeout(() => setShowGif(false), 3550); // Hide GIF after 3,55s
   };
 
   const handleCelebrate = () => {
@@ -52,17 +52,15 @@ const CityRevealButton = () => {
             <img src="/images/sin fondo.gif" alt="web" style={{position:'fixed',top:0,right:0,width:'1000px',zIndex:10,pointerEvents:'none'}} />
           )}
           <div
-            className="overlay-text"
+            className="overlay-text break-words whitespace-pre-line max-w-xl text-lg"
             onClick={e => e.stopPropagation()}
           >
-            <h1>Ahora… yo sé que recuerdas mi propuesta. Y seguramente estés leyendo esto con mucha anticipación, preguntándote:</h1>
-            <p>¿Cuándo me lo va a preguntar? ¿Por qué me está haciendo esperar tanto?</p>
+            <h1>Ahora… yo sé que recuerdas mi propuesta. Y seguramente estés leyendo esto con mucha anticipación, preguntándote: ¿Cuándo me lo va a preguntar? ¿Por qué me está haciendo esperar tanto?</h1>
             <p>Bueno… henos aquí.</p>
             <p>Sabiendo vos lo mucho que te amo, y lo feliz que soy de haberte conocido, llegó el momento de hacer la pregunta.</p>
             <p>¿Qué quisieras vos?</p>
             <p>¿Aliarte conmigo? ¿Ligarte a mí? ¿Y quizás, en un futuro, volver a hacernos esta misma pregunta… pero con otros títulos?</p>
-            <p>¿Te gustaría hacer mutua esta pregunta y darme el gran honor de decirme que sí?</p>
-            <p>¿Te gustaría ser mi media naranja, mi alma gemela o, como se dice comúnmente…</p>
+            <p>¿Te gustaría hacer mutua esta pregunta y darme el gran honor de decirme que sí? ¿ser mi media naranja, mi alma gemela o, como se dice comúnmente…</p>
             <button className="ask-button" onClick={handleCelebrate}>
               ¿me confirmas querer ser mi novio?
             </button>

@@ -74,8 +74,8 @@ export default function Calendario() {
         </button>
         <div className="flex-1 flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold mb-4">¿Quieres saber?</h2>
-          <p className="mb-8 max-w-xl text-center text-lg">
-            ¿Que cuál es el objetivo de este calendario? ¿Este obsequio tan raro, tan mío? Pues la verdad… estoy completamente enamorada de vos. Completamente boba. Y me pareció una forma linda, única y personal de rememorar nuestros dos primeros meses juntos. Al principio la idea era hacer un regalito chiquito, algo simple, un calendario de un solo mes. Pero claro… se me fue de las manos. Cada día me parecía especial. Cada momento, digno de recordarse. Y así, poquito a poquito, se fue alargando. Hasta que, bueno, acá estamos: tres meses. Los tres mejores meses de mi vida. Mi intención es que esto quede, que lo guardemos, y que algún día —ojalá con una tónica en mano, tirados en un sillón, rodeados de gatos o lo que sea que tengamos— podamos volver a leerlo. Reírnos. Recordar. Ver cómo empezó todo esto tan lindo que estamos construyendo. Te amo con todo mi corazón.
+          <p className="mb-1 max-w-xl text-center text-lg">
+            ¿Que cuál es el objetivo de este calendario? ¿Este obsequio tan raro, tan mío? Pues la verdad… estoy completamente enamorada de vos. Completamente boba. Y me pareció una forma linda, única y personal de rememorar nuestros dos primeros meses juntos. Al principio la idea era hacer un regalito chiquito, algo simple, un calendario de un solo mes. Pero claro… se me fue de las manos. Cada día me parecía especial. Cada momento, digno de recordarse. Y así, poquito a poquito, se fue alargando. Hasta que, bueno, acá estamos: tres meses. Los tres mejores meses de mi vida. Mi intención es que esto quede, que lo guardemos, y que algún día —ojalá con una tónica en mano, tirados en un sillón, rodeados de gatos o lo que sea que tengamos— podamos volver a leerlo. Reírnos. Recordar. Ver cómo empezó todo esto tan lindo que estamos construyendo. Gracias por estos meses juntos. Te amo con todo mi corazón.
           </p>
         </div>
         <div className="mt-8">
@@ -89,8 +89,8 @@ export default function Calendario() {
   const sidebarImage = "/images/house.png"; // You can use any image you like
   const monthNames = { Marzo: "MARZO", Abril: "ABRIL", Mayo: "MAYO" };
   const year = 2025;
-  const monthNumber = { Marzo: "03", Abril: "04", Mayo: "05" };
-
+  const monthNumber = selectedDay ? String(selectedDay.day).padStart(2, '0') : "";
+  
   return (
     <div className="flex bg-[#f7f3ec] rounded-2xl shadow-md max-w-5xl mx-auto transition-all duration-500 overflow-hidden calendario-bg">
       {/* Sidebar with Radial Wipe transition */}
@@ -105,7 +105,9 @@ export default function Calendario() {
           style={{ position: 'relative', zIndex: 1 }}
         >
           <div className="text-[#a97c50] text-lg font-bold mb-2">{year}</div>
-          <div className="text-6xl font-extrabold text-[#7c4a1e] leading-none mb-2">{monthNumber[mesActual]}</div>
+          <div className="text-6xl font-extrabold text-[#7c4a1e] leading-none mb-2">
+            {monthNumber}
+          </div>
           <div className="text-2xl font-bold text-[#a97c50] mb-6 tracking-widest">{monthNames[mesActual]}</div>
           {/* Only the image fades on day change */}
           <AnimatePresence mode="wait">
