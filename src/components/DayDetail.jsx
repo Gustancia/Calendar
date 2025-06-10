@@ -13,6 +13,8 @@ const DayDetail = ({ image, story, day, month, onClose }) => { // Añadimos day 
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
         className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+        onClick={onClose} // Close modal when clicking the overlay
+        style={{ overflowY: 'auto' }}
       >
         <motion.div
           key={image} // Key para animar el contenido interno si la imagen cambia
@@ -20,7 +22,14 @@ const DayDetail = ({ image, story, day, month, onClose }) => { // Añadimos day 
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -50, opacity: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }} // Pequeño retraso para que aparezca después del fondo
-          className="bg-white rounded-2xl p-6 shadow-xl w-full max-w-prose mx-4 sm:mx-auto"
+          className="rounded-2xl p-6 shadow-2xl w-full max-w-4xl mx-4 sm:mx-auto max-h-[90vh] overflow-y-auto relative bg-white bg-opacity-95 border-0"
+          style={{
+            backgroundImage: "linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.5)), url('/images/wallpaper/pastel-tulips.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          onClick={e => e.stopPropagation()} // Prevent closing when clicking inside modal
         >
           <button
             onClick={onClose}
