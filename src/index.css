@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Railey&display=swap');
 
 body {
   font-family: 'Quicksand', sans-serif;
@@ -43,7 +44,7 @@ input[type="reset"],
 .comic-button {
   border: none;
   padding: 0;
-  cursor: pointer;
+  cursor: url('/images/cursor-lg.png') 8 8, pointer;
   background: none;
   transition: transform 0.3s ease;
 }
@@ -51,7 +52,7 @@ input[type="reset"],
   transform: scale(1.05);
 }
 .comic-preview {
-  width: 200px;
+  width: 800px;
   height: 200px;
   border: 5px solid white;
   box-shadow: 0 0 15px #e2b0bc;
@@ -111,6 +112,9 @@ input[type="reset"],
 }
 .ask-button:hover {
   transform: scale(1.1);
+}
+.recapitulemos-title {
+  font-family: 'Railey', cursive;
 }
 @keyframes expandComic {
   0% {
