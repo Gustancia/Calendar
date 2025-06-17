@@ -74,7 +74,7 @@ export default function Calendario() {
         </button>
         <div className="flex-1 flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold mb-4">¿Quieres saber?</h2>
-          <p className="mb-1 max-w-xl text-center text-lg">
+          <p className="mb-1 max-w-2xl text-center text-lg">
             ¿Que cuál es el objetivo de este calendario? ¿Este obsequio tan raro, tan mío? Pues la verdad… estoy completamente enamorada de vos. Completamente boba. Y me pareció una forma linda, única y personal de rememorar nuestros dos primeros meses juntos. Al principio la idea era hacer un regalito chiquito, algo simple, un calendario de un solo mes. Pero claro… se me fue de las manos. Cada día me parecía especial. Cada momento, digno de recordarse. Y así, poquito a poquito, se fue alargando. Hasta que, bueno, acá estamos: tres meses. Los tres mejores meses de mi vida. Mi intención es que esto quede, que lo guardemos, y que algún día —ojalá con una tónica en mano, tirados en un sillón, rodeados de gatos o lo que sea que tengamos— podamos volver a leerlo. Reírnos. Recordar. Ver cómo empezó todo esto tan lindo que estamos construyendo. Gracias por estos meses juntos. Te amo con todo mi corazón.
           </p>
         </div>

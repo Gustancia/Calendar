@@ -41,7 +41,7 @@ input[type="reset"],
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align to top */
-  margin-top: 1.5rem; /* Space from the button above */
+  margin-top: 0.5rem; /* Space from the button above */
 }
 .comic-button {
   border: none;
@@ -59,7 +59,7 @@ input[type="reset"],
   border: 5px solid white;
   box-shadow: 0 0 15px #e2b0bc;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .comic-reveal {
   position: absolute;
@@ -101,6 +101,7 @@ input[type="reset"],
   text-shadow: 2px 2px 4px rgba(2, 1, 1, 0.544);
   animation: textPop 1s ease 1s forwards;
   opacity: 0;
+  margin-top: -100px;;
 }
 .ask-button {
   margin-top: 1rem;
@@ -124,8 +125,6 @@ input[type="reset"],
   margin-bottom: 1rem;
   width: 100%;
   color: #7c4a1e;
-  text-shadow: 1px 1px 3px #a97d50a0;
-  animation: pulse 3s infinite; 
 }
      /*TIPOS DE ANIMACIONES*/
 @keyframes expandComic {
