@@ -151,7 +151,7 @@ export default function Calendario() {
       {/* Calendar grid */}
       <div className="flex-1 p-6">
         {/* Title above calendar grid */}
-        <h1 className="recapitulemos-title text-3xl font-bold text-center mb-4 w-full">Recordemos nuestro hermoso tiempo juntos</h1>
+        <h1 className="recapitulemos-title ">RECORDEMOS NUESTRO HERMOSO TIEMPO JUNTOS</h1>
         <div className="bg-[#fdf8f3] rounded-2xl p-4 shadow-md">
           <div className="grid grid-cols-7 gap-2 mb-2 text-center font-bold text-[#a97c50] text-lg tracking-wide">
             <div>DOM</div>

@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import comicCity from '../assets/comic-city.png';
+import comicCity from '../assets/comic-city-nada.png';
 import confetti from 'canvas-confetti';
 import { Howl } from 'howler';
-import celebrationSound from '../assets/celebration.mp3';
+import celebrationSound from '../assets/Kiss.mp3';
 
 const CityRevealButton = () => {
   const [revealed, setRevealed] = useState(false);
@@ -55,14 +55,16 @@ const CityRevealButton = () => {
             className="overlay-text break-words whitespace-pre-line max-w-xl text-lg"
             onClick={e => e.stopPropagation()}
           >
-            <h1>Ahora… yo sé que recuerdas mi propuesta. Y seguramente estés leyendo esto con mucha anticipación, preguntándote: ¿Cuándo me lo va a preguntar? ¿Por qué me está haciendo esperar tanto?</h1>
+            <h1>Ahora… yo sé que recuerdas mi propuesta.</h1>
+            <p>Y seguramente estés leyendo esto con mucha anticipación, preguntándote: ¿Cuándo me lo va a preguntar?</p>
+            <p> ¿Por qué me está haciendo esperar tanto?</p>
             <p>Bueno… henos aquí.</p>
             <p>Sabiendo vos lo mucho que te amo, y lo feliz que soy de haberte conocido, llegó el momento de hacer la pregunta.</p>
             <p>¿Qué quisieras vos?</p>
             <p>¿Aliarte conmigo? ¿Ligarte a mí? ¿Y quizás, en un futuro, volver a hacernos esta misma pregunta… pero con otros títulos?</p>
             <p>¿Te gustaría hacer mutua esta pregunta y darme el gran honor de decirme que sí? ¿ser mi media naranja, mi alma gemela o, como se dice comúnmente…</p>
             <button className="ask-button" onClick={handleCelebrate}>
-              ¿me confirmas querer ser mi novio?
+              ¿ME CONFIRMAS QUERER SER MI NOVIO?
             </button>
             {celebrated && <div className="mt-4 text-2xl animate-bounce">¡Ya sé tu respuesta amor!, pero mereces el cielo y que te lo pregunte bien bonito... te amo</div>}
           </div>
