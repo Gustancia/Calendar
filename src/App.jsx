@@ -1,11 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Calendario from './components/Calendario'
+import RandomGifSlider from './components/RandomGifSlider';
 
 export default function App() {
   // Background music state and ref
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
+
+  // Calendar state for controlling gif visibility
+  const [showGifSlider, setShowGifSlider] = useState(true);
+
+  // Listen for calendar UI state
+  const handleCalendarState = (state) => {
+    setShowGifSlider(state === 'home');
+  };
 
   // Play/pause handler
   const toggleMusic = () => {
@@ -71,7 +80,8 @@ export default function App() {
           aria-label="Volumen de la música"
         />
       </div>
-      <Calendario />
+      <RandomGifSlider show={showGifSlider} />
+      <Calendario onPageChange={handleCalendarState} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import CityRevealButton from "./CityRevealButton";
 import DayDetail from "./DayDetail";
 import { meses } from '../data/calendarData';
 
-export default function Calendario() {
+export default function Calendario({ onPageChange }) {
   const [mesActual, setMesActual] = useState("Marzo");
   const [selectedDay, setSelectedDay] = useState(meses["Marzo"][0]);
   const [showSaberMas, setShowSaberMas] = useState(false);
@@ -28,6 +28,14 @@ export default function Calendario() {
   };
 
   useEffect(() => {
+    // Notify parent about which page is visible
+    if (onPageChange) {
+      if (!showSaberMas && !showDayDetail) {
+        onPageChange('home');
+      } else {
+        onPageChange('not-home');
+      }
+    }
     const handleKeyDown = (e) => {
       if (showSaberMas || showDayDetail) return;
       if (e.key === "ArrowLeft") {
@@ -61,7 +69,7 @@ export default function Calendario() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [mesActual, selectedDay, showSaberMas, showDayDetail]);
+  }, [mesActual, selectedDay, showSaberMas, showDayDetail, onPageChange]);
 
   if (showSaberMas) {
     return (

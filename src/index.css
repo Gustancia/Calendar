@@ -156,8 +156,22 @@ input[type="reset"],
   80%  { transform: scale(0.95); }
   100% { transform: scale(1); }
 }
-@keyframes slideInUp { //from bottom to top
+@keyframes slideInUp { /*from bottom to top*/
   from { transform: translateY(40px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
 }
 /* --- End City Reveal Button styles --- */
+
+.random-gif-slider {
+  position: fixed;
+  left: -200px;
+  z-index: 9999;
+  width: 300px; /* Adjust to 200px */
+  pointer-events: none;
+  animation: slide-across 2.5s linear forwards;
+}
+
+@keyframes slide-across {
+  0%   { left: -200px; }
+  100% { left: 110vw; }
+}
